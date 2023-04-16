@@ -12,7 +12,7 @@ export type EventKeys = keyof ClientEvents;
 export type EventExec<T extends EventKeys> = (
   props: IEventProps,
   ...args: ClientEvents[T]
-) => Awaitable<void>;
+) => Awaitable<unknown>;
 
 export interface IEvent<T extends EventKeys> {
   id: T;
