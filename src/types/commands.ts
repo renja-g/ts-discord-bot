@@ -26,7 +26,12 @@ export interface ICommand {
   exec: CommandExec;
 }
 
-export interface ICommandCategory {
+export interface ICommandCategoryExtra {
+  description?: string;
+  emoji?: string;
+}
+
+export interface ICommandCategory extends ICommandCategoryExtra {
   name: string;
   commands: ICommand[];
 }

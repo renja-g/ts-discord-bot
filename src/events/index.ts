@@ -3,8 +3,9 @@ import ready from './ready';
 import interactionCreate from './interactionCreate';
 
 const events: IEvent<any>[] = [
+    ...interactionCreate,
     ready,
-    interactionCreate,
+
 ];
 
 export default events;

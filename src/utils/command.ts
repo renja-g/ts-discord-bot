@@ -1,4 +1,10 @@
-import { ICommand, ICommandCategory, CommandExec, CommandMeta } from '../types';
+import {
+    ICommand,
+    ICommandCategory,
+    CommandExec,
+    CommandMeta,
+    ICommandCategoryExtra,
+} from '../types';
 
 export function command(meta: CommandMeta, exec: CommandExec): ICommand {
     return {
@@ -7,9 +13,14 @@ export function command(meta: CommandMeta, exec: CommandExec): ICommand {
     };
 }
 
-export function category(name: string, commands: ICommand[]): ICommandCategory {
+export function category(
+    name: string,
+    commands: ICommand[],
+    extra: ICommandCategoryExtra
+): ICommandCategory {
     return {
         name,
         commands,
+        ...extra,
     };
 }
