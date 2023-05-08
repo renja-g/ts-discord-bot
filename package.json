@@ -9,7 +9,9 @@
     "build": "tsc",
     "start": "node  .",
     "deploy": "cross-env IS_SCRIPT=true ts-node src/scripts/deploy.ts",
-    "deploy-prod": "cross-env NODE_ENV=production npm run deploy"
+    "undeploy": "cross-env IS_SCRIPT=true ts-node src/scripts/undeploy",
+    "deploy-prod": "cross-env NODE_ENV=production npm run deploy",
+    "undeploy-prod": "cross-env NODE_ENV=production npm run undeploy"
   },
   "keywords": [],
   "author": "",
