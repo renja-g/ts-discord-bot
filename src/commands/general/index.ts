@@ -1,8 +1,10 @@
 import { category } from '../../utils';
 import help from './help';
-import membercount from './membercount';
+import memberCount from './memberCount';
+import move from './move';
 
 export default category('general', [
   help,
-  membercount
+  memberCount,
+  move
 ], {'emoji': '📖', 'description': 'General commands.'});
