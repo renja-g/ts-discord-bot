@@ -50,4 +50,4 @@ export default command(meta, async ({ interaction }) => {
   await reply.edit({
     content: `Moved ${user} ${n} times.`
   });
-});git
+});
